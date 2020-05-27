@@ -1,0 +1,8 @@
+<div *ngIf="roomUsers$ | async as users">
+  <div>{{ users.length }} Participants</div>
+  <hr />
+
+  <div class="list-group list-group-flush">
+    <div *ngFor="let user of users; trackBy: byIndex" class="list-group-item">{{ user }}</div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<h2 class="mb-4">Welcome to Lumigo Chat!</h2>
+<div class="form-group">
+  <input
+    class="form-control"
+    autofocus
+    [formControl]="name"
+    (keydown.enter)="join()"
+    placeholder="What's your name?"
+  />
+</div>
+<div class="text-right">
+  <button (click)="join()" class="btn btn-outline-primary" [disabled]="name.invalid">Join</button>
+</div>

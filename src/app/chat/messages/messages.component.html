@@ -1,0 +1,15 @@
+<div *ngIf="user$ | async as user">
+  <h5>{{ (room$ | async)?.name }} Room</h5>
+
+  <div>
+    <div
+      *ngFor="let message of messages$ | async; trackBy: byIndex"
+      [class.text-right]="message.user.userId === user.userId"
+    >
+      <div class="message">
+        <div>{{ message.user.name }}</div>
+        <div>{{ message.text }}</div>
+      </div>
+    </div>
+  </div>
+</div>

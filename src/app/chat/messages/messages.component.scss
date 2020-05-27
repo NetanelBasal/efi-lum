@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.message {
+  background: #f3f3f3;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  min-width: 200px;
+}

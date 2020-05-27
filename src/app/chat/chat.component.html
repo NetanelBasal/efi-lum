@@ -1,0 +1,22 @@
+<div class="d-flex">
+  <app-room-users></app-room-users>
+  <div class="d-flex flex-column flex-grow-1">
+    <app-room-messages class="height-100"></app-room-messages>
+
+    <div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          [disabled]="message.invalid"
+          (keydown.enter)="addMessage()"
+          placeholder="Type a message"
+          [formControl]="message"
+        />
+      </div>
+
+      <div class="text-right">
+        <button (click)="leaveRoom()" class="btn btn-outline-warning btn-sm">Exit Room</button>
+      </div>
+    </div>
+  </div>
+</div>
